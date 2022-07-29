@@ -29,21 +29,21 @@ jobs:
      
     - name: install dependencies    
       run: |
-        cd my-app
+        
         npm ci
     
     - name: build app
       run: |
-       cd my-app
+       
        npm run build    
     
     - name: run component tests
       run: |
-       cd my-app
+       
        npm run test
     
     - name: start the app
       run: |
-       cd my-app
+       
        npm start &
        npx wait-on --timeout 60000 
