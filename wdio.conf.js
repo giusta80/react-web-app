@@ -82,12 +82,12 @@ exports.config = {
         // grid with only 5 firefox instances available you can make sure that not more than
         // 5 instances get started at a time.
         maxInstances: 5,
-        //
         browserName: 'chrome',
-        platformName: 'windows 10',
-        'sauce:options':{...sauceOptions},
-        'sauce:visual':{...visualOptions, viewportSize: '1366x768'},
-        acceptInsecureCerts: true
+        acceptInsecureCerts: true,
+        // We need to extends some Chrome flags in order to tell Chrome to run headless
+        'goog:chromeOptions': {
+          args: ['--headless', '--disable-gpu', '--disable-dev-shm-usage'],
+        }
         // If outputDir is provided WebdriverIO can capture driver session logs
         // it is possible to configure which logTypes to include/exclude.
         // excludeDriverLogs: ['*'], // pass '*' to exclude all driver session logs
