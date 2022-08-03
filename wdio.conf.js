@@ -84,7 +84,6 @@ exports.config = {
         maxInstances: 5,
         //
         browserName: 'chrome',
-        platformName: 'windows 10',
         'sauce:options':{...sauceOptions},
         'sauce:visual':{...visualOptions, viewportSize: '1366x768'},
         acceptInsecureCerts: true
